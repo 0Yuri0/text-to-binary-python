@@ -4,6 +4,7 @@ resultado = "null"
 num_caracteres = len(frase)
 caracter = list(frase)
 cont = 0
+final=""
 
 print("\nResultado: ")
 
@@ -11,6 +12,58 @@ while (cont<num_caracteres):
     match caracter[cont]:
         case ' ':
             resultado = "00100000"
+        case '!':
+            resultado = "00100001"
+        case '"':
+            resultado = "00100010"
+        case '#':
+            resultado = "00100011"
+        case '$':
+            resultado = "00100100"
+        case '%':
+            resultado = "00100101"
+        case '&':
+            resultado = "00100110"
+        case '(':
+            resultado = "00101000"
+        case ')':
+            resultado = "00101001"
+        case '*':
+            resultado = "00101010"
+        case '+':
+            resultado = "00101011"
+        case ',':
+            resultado = "00101100"
+        case '-':
+            resultado = "00101101"
+        case '.':
+            resultado = "00101110"
+        case '/':
+            resultado = "00101111"
+        case ':':
+            resultado = "00111010"
+        case ';':
+            resultado = "00111011"
+        case '<':
+            resultado = "00111100"
+        case '=':
+            resultado = "00111101"
+        case '>':
+            resultado = "00111110"
+        case '?':
+            resultado = "00111111"
+        case '@':
+            resultado = "01000000"
+        case '[':
+            resultado = "01011011"
+        case ']':
+            resultado = "01011101"
+        case '^':
+            resultado = "01011110"
+        case '_':
+            resultado = "01011111"
+        case '`':
+            resultado = "01100000"
         #Números
         case '0':
             resultado = "00110000"
@@ -140,7 +193,7 @@ while (cont<num_caracteres):
             resultado = "01011010"
         case _:
             print("?")
-    print(resultado)
+    final = final + " " + str(resultado)
     cont = cont+1
-
+print(final)
 print("\nFim do programa.")
